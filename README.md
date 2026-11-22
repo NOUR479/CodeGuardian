@@ -81,8 +81,8 @@ CodeGuardianAI/
 Replace the placeholders with your actual GitHub username and repository name.
 
 ```bash
-git clone https://github.com/<your-username>/<your-repository>.git
-cd <your-repository>
+git clone https://github.com/NOUR479/CodeGuardian/CodeGuardianAI.git
+cd CodeGuardianAI 
 ```
 
 ### 2. Create a virtual environment
@@ -194,4 +194,4 @@ No license has been added yet. If you intend to permit reuse, select an appropri
 
 **CodeGuardian AI** · AI-assisted debugging for Python
 
-*Built as a software engineering portfolio project.*
+
