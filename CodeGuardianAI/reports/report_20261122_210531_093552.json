@@ -1,0 +1,20 @@
+{
+    "date": "2026-11-22T21:05:31.093552+01:00",
+    "original_code": "def get_user_name(user):\n    return user[\"name\"].upper()\n\nprint(get_user_name(None))\n",
+    "diagnosis": {
+        "bug_found": true,
+        "bug_type": "TypeError / KeyError",
+        "severity": "high",
+        "explanation": "L'appel get_user_name(None) lève une exception TypeError car la fonction tente d'indexer user['name'] sur un objet None. De plus, si un dictionnaire ne contient pas la clé 'name', une exception KeyError est levée.",
+        "fix_code": "def get_user_name(user):\n    if user is None or \"name\" not in user or user[\"name\"] is None:\n        return \"\"\n    return user[\"name\"].upper()\n\nprint(get_user_name(None))",
+        "uncertainties": [
+            "Le comportement attendu si la valeur associée à 'name' n'est pas une chaîne de caractères (par exemple un entier ou un booléen)."
+        ]
+    },
+    "tests": {
+        "success": true,
+        "stdout": "\nTests get_user_name réussis.\n",
+        "stderr": ""
+    },
+    "attempts": 1
+}
